@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .translate-z-0 {
+        transform: translateZ(0);
+    }
+
+    .translate-z-neg-100 {
+        transform: translateZ(-100px);
+    }
+
+    .translate-z-50 {
+        transform: translateZ(50px);
+    }
+}
+
+@keyframes neon {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 25px #fff;
+    }
+
+    50% {
+        text-shadow: 0 0 15px #fff, 0 0 30px #fff, 0 0 50px #fff;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.5;
+    @apply bg-white text-gray-900;
+}
+
+.dark {
+    @apply bg-gray-800 text-gray-200;
+}
+
+@layer components {
+    .home-container {
+        display: flex;
+        min-height: 100vh;
+        align-items: stretch;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        flex-shrink: 0;
+        width: 280px;
+        min-height: 100vh;
+        padding: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .main-content {
+        flex-grow: 1;
+        width: 100%;
+        overflow-x: hidden;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Đảm bảo footer không vượt quá giới hạn nhưng vẫn responsive */
+    .max-w-screen-2xl {
+        max-width: 1920px;
+        width: 100%;
+    }
+}
+
+/* Media queries cho responsive */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+        /* Thu nhỏ sidebar trên tablet */
+    }
+
+    .main-content {
+        padding: 1.5rem;
+        /* Giảm padding trên tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        /* Ẩn sidebar trên mobile */
+        padding: 0;
+        min-height: 0;
+    }
+
+    .main-content {
+        padding: 1rem;
+        /* Giảm padding trên mobile */
+        width: 100%;
+    }
+
+    .home-container {
+        flex-direction: column;
+        /* Xếp dọc trên mobile */
+    }
+}
+
+/* Màn hình lớn hơn 1920px (ví dụ: 2560px, 4K) */
+@media (min-width: 1920px) {
+    .home-container {
+        max-width: 2560px;
+        /* Mở rộng tối đa cho màn hình lớn */
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        width: 300px;
+        /* Tăng chiều rộng sidebar trên màn hình lớn */
+    }
+
+    .main-content {
+        padding: 3rem;
+        /* Tăng padding trên màn hình lớn */
+    }
+}
+
+/* Hiệu ứng cuộn ngang cho tên sản phẩm */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 5s linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Đảm bảo container không bị tràn */
+.hover\:animate-marquee:hover .animate-marquee {
+    animation-play-state: running;
+}
+
+.animate-marquee {
+    animation-play-state: paused;
+}
+
+/* Tùy chỉnh nút Xem thêm/Thu gọn */
+button:hover svg {
+    transform: translateY(2px);
+    transition: transform 0.2s ease;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}

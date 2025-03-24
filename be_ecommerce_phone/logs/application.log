@@ -1,0 +1,30 @@
+2025-03-24T14:58:09.480+07:00  INFO 5692 --- [main] com.sondv.phone.PhoneApplication         : Starting PhoneApplication using Java 17.0.12 with PID 5692 (D:\ecommerce_phone\be_ecommerce_phone\target\classes started by doanv in D:\ecommerce_phone\be_ecommerce_phone)
+2025-03-24T14:58:09.489+07:00 DEBUG 5692 --- [main] com.sondv.phone.PhoneApplication         : Running with Spring Boot v3.2.2, Spring v6.1.3
+2025-03-24T14:58:09.490+07:00  INFO 5692 --- [main] com.sondv.phone.PhoneApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-03-24T14:58:12.719+07:00  INFO 5692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-24T14:58:12.723+07:00  INFO 5692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-24T14:58:13.154+07:00  INFO 5692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 417 ms. Found 16 JPA repository interfaces.
+2025-03-24T14:58:13.737+07:00  INFO 5692 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6090c18c-88e7-3049-a988-ab0d9e7eec66
+2025-03-24T14:58:15.274+07:00  INFO 5692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-24T14:58:15.297+07:00  INFO 5692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-24T14:58:15.298+07:00  INFO 5692 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-03-24T14:58:15.662+07:00  INFO 5692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-24T14:58:15.664+07:00  INFO 5692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5857 ms
+2025-03-24T14:58:18.308+07:00  INFO 5692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-24T14:58:18.582+07:00  INFO 5692 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-03-24T14:58:18.996+07:00  INFO 5692 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-24T14:58:21.125+07:00  INFO 5692 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-24T14:58:21.240+07:00  INFO 5692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-24T14:58:22.096+07:00  INFO 5692 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1be12e05
+2025-03-24T14:58:22.100+07:00  INFO 5692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-24T14:58:22.224+07:00  WARN 5692 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-24T14:58:22.227+07:00  WARN 5692 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-24T14:58:25.212+07:00  INFO 5692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-24T14:58:25.609+07:00  INFO 5692 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-24T14:58:26.351+07:00  INFO 5692 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-24T14:58:27.171+07:00 DEBUG 5692 --- [main] c.s.p.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-03-24T14:58:29.715+07:00  WARN 5692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-24T14:58:32.327+07:00  INFO 5692 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-03-24T14:58:32.654+07:00  INFO 5692 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3905083a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19d5bed6, org.springframework.security.web.context.SecurityContextHolderFilter@59721a17, org.springframework.security.web.header.HeaderWriterFilter@7343e98a, org.springframework.web.filter.CorsFilter@8847a1d, com.sondv.phone.security.RateLimitFilter@77e0b681, com.sondv.phone.security.JwtAuthenticationFilter@7e3ccedb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b080464, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39f5f24, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b7fdef9, org.springframework.security.web.session.SessionManagementFilter@27f3c057, org.springframework.security.web.access.ExceptionTranslationFilter@51a6748f, org.springframework.security.web.access.intercept.AuthorizationFilter@366731ae]
+2025-03-24T14:58:38.184+07:00  INFO 5692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-03-24T14:58:38.432+07:00  INFO 5692 --- [main] com.sondv.phone.PhoneApplication         : Started PhoneApplication in 29.968 seconds (process running for 31.197)
